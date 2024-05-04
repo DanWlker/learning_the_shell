@@ -42,3 +42,14 @@ Replace stuff in file, some extra options:
 Pipe stuff from and into new file
 
     tr "[:lower:]" "[:upper:]" <README.md >newStuff.txt
+
+# mv
+
+## Useful Flags
+1. `-b` : take a backup of an existing file that will be ovewritten
+2. `-i` : makes mv ask for confirmation before overwriting
+3. `-n` : prevents existing file from being overwritten
+
+Move multiple files at once
+
+    mv file1 file2 file3 /path/to/destination
