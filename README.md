@@ -2,12 +2,12 @@
 
 ## Useful flags:
 1. `--query \'celeste.zip `
-2. `--query "'celeste.zip | 'celeste-osx"` : query with or |
+2. `--query "'celeste.zip | 'celeste-osx"` : query with or `|`
 3. `-preview 'cat {}'`
 
 ## Command related specific syntax
-1. 'celeste.zip: ' searches exact match
-2. 'celeste.zip | 'celeste-osx : or is |
+1. 'celeste.zip: `'` searches exact match
+2. 'celeste.zip | 'celeste-osx : or is `|`
 
 Piping output from fzf to cat
 
@@ -37,7 +37,7 @@ Pipe ls to grep/ripgrep to find specific file
 Replace stuff in file, some extra options:
 
     cat README.md | tr "[:lower:]" "[:upper:]"
-    tr "[:lower:]" "[:upper:]" < README.md
+    tr "[:lower:]" "[:upper:]" <README.md
 
 Pipe stuff from and into new file
 
