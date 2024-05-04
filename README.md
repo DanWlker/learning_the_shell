@@ -24,6 +24,13 @@ Pipe ls to grep/ripgrep to find specific file
     ls -l | grep "Desktop"
     ls -l | rg "Desktop"
 
+## find
+
+Pipe find to grep/ripgrep to filter not include or include, you can chain them apparently
+
+    find . -iname pubspec.yaml | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
+    find . -iname pubspec.yaml | grep -v 'Dart-Code' | grep -v 'packages'| grep -v '/flutter'
+
 ## tr
 
 ### Useful flags
@@ -84,6 +91,14 @@ Unzip to same folder as the zip name
     unzip file.zip
 
 ## git
+
+View diff for file
+
+    git diff filename.txt
+
+View diff for staged file
+
+    git diff --staged filename.txt
 
 List worktree
 
