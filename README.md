@@ -64,3 +64,13 @@ Move multiple files at once
 Copy multiple files at once
 
     cp file1 file2 file3 /path/to/destination
+
+# unzip
+
+## Useful Flags
+1. `-d destination_folder` : unzip to particular folder
+2. `-l path/to/archive.zip` : list without unzip
+
+Unzip to same folder as the zip name
+
+    unzip file.zip
