@@ -47,9 +47,20 @@ Pipe stuff from and into new file
 
 ## Useful Flags
 1. `-b` : take a backup of an existing file that will be ovewritten
-2. `-i` : makes mv ask for confirmation before overwriting
+2. `-i` : ask for confirmation before overwriting
 3. `-n` : prevents existing file from being overwritten
 
 Move multiple files at once
 
     mv file1 file2 file3 /path/to/destination
+
+# cp
+
+## Useful Flags
+1. `-b` : take a backup of an existing file that will be ovewritten
+2. `-i` : ask for confirmation before overwriting
+3. `-r` : copies directory structure recursively
+
+Copy multiple files at once
+
+    cp file1 file2 file3 /path/to/destination
