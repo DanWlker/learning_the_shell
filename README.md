@@ -17,19 +17,21 @@ Piping output from fzf to cat
 
     cat $(fzf)
 
-## ls
+## ls/eza
 
 Pipe ls to grep/ripgrep to find specific file
 
     ls -l | grep "Desktop"
     ls -l | rg "Desktop"
+    eza -l | rg "Desktop"
 
-## find
+## find/fd
 
-Pipe find to grep/ripgrep to filter not include or include, you can chain them apparently
+Pipe find/fd to grep/ripgrep to filter not include or include, you can chain them apparently
 
     find . -iname pubspec.yaml | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
     find . -iname pubspec.yaml | grep -v 'Dart-Code' | grep -v 'packages'| grep -v '/flutter'
+    fd 'pubspec.yaml' | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
 
 ## tr
 
