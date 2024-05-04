@@ -100,3 +100,4 @@ Git blame see when the change was introduced (merged) into the branch instead of
 Git draw graph
 
     git log --graph --oneline --all
+    git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=local --branches
