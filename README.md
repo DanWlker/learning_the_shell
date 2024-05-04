@@ -74,3 +74,29 @@ Copy multiple files at once
 Unzip to same folder as the zip name
 
     unzip file.zip
+
+# git
+
+List worktree
+
+    git worktree list
+
+Remove worktree
+    
+    git worktree remove worktree_folder
+
+Add worktree for existing branch
+
+    git worktree add destination_folder branch_to_checkout
+
+Add worktree for non existing branch
+
+    git worktree add destination_folder -b branch_to_checkout
+
+Git blame see when the change was introduced (merged) into the branch instead of when the change was made (default behaviourw will ignore merge commits)
+    
+    git blame --first-parent file
+
+Git draw graph
+
+    git log --graph --oneline --all
