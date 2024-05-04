@@ -13,9 +13,10 @@
 1. 'celeste.zip: `'` searches exact match
 2. 'celeste.zip | 'celeste-osx : or is `|`
 
-Piping output from fzf to cat
+Piping output from fzf to cat/bat
 
     cat $(fzf)
+    bat $(fzf)
 
 ## ls/eza
 
