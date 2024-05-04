@@ -1,11 +1,15 @@
-# fzf
+# Learning The Shell
 
-## Useful flags:
-1. `--query \'celeste.zip `
+## fzf
+
+### Useful flags
+
+1. `--query \'celeste.zip`
 2. `--query "'celeste.zip | 'celeste-osx"` : query with or `|`
 3. `-preview 'cat {}'`
 
-## Command related specific syntax
+### Command related specific syntax
+
 1. 'celeste.zip: `'` searches exact match
 2. 'celeste.zip | 'celeste-osx : or is `|`
 
@@ -13,26 +17,27 @@ Piping output from fzf to cat
 
     cat $(fzf)
 
-# ls
+## ls
 
 Pipe ls to grep/ripgrep to find specific file
 
     ls -l | grep "Desktop"
     ls -l | rg "Desktop"
 
-# tr
+## tr
 
-## Useful flags:
+### Useful flags
+
 1. `-d "stuff"` : delete "stuff"
 2. `-cd "stuff"` : delete everything except stuff
 3. `-s " "` : truncate repeating " " to single
 
-## Command related specific syntax
+### Command related specific syntax
+
 1. [:lower:] : lower case
 2. [:upper:] : upper case
 3. [:space:]
 4. [:digit:]
-
 
 Replace stuff in file, some extra options:
 
@@ -43,9 +48,10 @@ Pipe stuff from and into new file
 
     tr "[:lower:]" "[:upper:]" <README.md >newStuff.txt
 
-# mv
+## mv
 
-## Useful Flags
+### Useful Flags
+
 1. `-b` : take a backup of an existing file that will be ovewritten
 2. `-i` : ask for confirmation before overwriting
 3. `-n` : prevents existing file from being overwritten
@@ -54,9 +60,10 @@ Move multiple files at once
 
     mv file1 file2 file3 /path/to/destination
 
-# cp
+## cp
 
-## Useful Flags
+### Useful Flags
+
 1. `-b` : take a backup of an existing file that will be ovewritten
 2. `-i` : ask for confirmation before overwriting
 3. `-r` : use this if want copy directory
@@ -65,9 +72,10 @@ Copy multiple files at once
 
     cp file1 file2 file3 /path/to/destination
 
-# unzip
+## unzip
 
-## Useful Flags
+### Useful Flags
+
 1. `-d destination_folder` : unzip to particular folder
 2. `-l path/to/archive.zip` : list without unzip
 
@@ -75,14 +83,14 @@ Unzip to same folder as the zip name
 
     unzip file.zip
 
-# git
+## git
 
 List worktree
 
     git worktree list
 
 Remove worktree
-    
+
     git worktree remove worktree_folder
 
 Add worktree for existing branch
@@ -94,7 +102,7 @@ Add worktree for non existing branch
     git worktree add destination_folder -b branch_to_checkout
 
 Git blame see when the change was introduced (merged) into the branch instead of when the change was made (default behaviourw will ignore merge commits)
-    
+
     git blame --first-parent file
 
 Git draw graph
