@@ -59,7 +59,7 @@ Move multiple files at once
 ## Useful Flags
 1. `-b` : take a backup of an existing file that will be ovewritten
 2. `-i` : ask for confirmation before overwriting
-3. `-r` : copies directory structure recursively
+3. `-r` : use this if want copy directory
 
 Copy multiple files at once
 
