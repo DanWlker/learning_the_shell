@@ -134,3 +134,9 @@ Mounting an smb folder to a folder
 
     mount -t smbfs //userneame@server_ip/folder ./mount_folder
 
+## history
+
+Search through history with grep
+
+    history 50 | grep brew
+
