@@ -127,3 +127,10 @@ Git draw graph
 
     git log --graph --oneline --all
     git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=local --branches
+
+## mount
+
+Mounting an smb folder to a folder
+
+    mount -t smbfs //userneame@server_ip/folder ./mount_folder
+
