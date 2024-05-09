@@ -1,5 +1,12 @@
 # Learning The Shell
 
+## Terminal
+
+Clear the whole terminal including scrollback buffer
+
+    tput reset
+
+
 ## fzf
 
 ### Useful flags
