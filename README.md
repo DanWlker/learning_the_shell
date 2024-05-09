@@ -1,12 +1,5 @@
 # Learning The Shell
 
-## Terminal
-
-Clear the whole terminal including scrollback buffer
-
-    tput reset
-
-
 ## fzf
 
 ### Useful flags
@@ -147,3 +140,9 @@ Search through history with grep
 
     history 50 | grep brew
 
+
+## tput
+
+Clear the whole terminal including scrollback buffer
+
+    tput reset
