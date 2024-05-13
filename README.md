@@ -1,5 +1,19 @@
 # Learning The Shell
 
+## Operators
+
+### $()
+
+Subshell, not actually a command but more of syntax, allows you to run commands then inject the output of the command into another thing (Refer examples below)
+
+### > or <
+
+Redirecting stream to, only applies to stdout
+
+### >> or <<
+
+Appends rather than write to file when compared to single variants above
+
 ## fzf
 
 ### Useful flags
@@ -140,9 +154,51 @@ Search through history with grep
 
     history 50 | grep brew
 
-
 ## tput
 
 Clear the whole terminal including scrollback buffer
 
     tput reset
+
+## ln
+
+### Useful flags
+
+1. `-s`: creates a symlink, without this it creates a hard link
+
+Create a symlink
+
+    ln -s /path/to/file_or_directory path/to/symlin
+
+Ovewrite existing symlink
+
+    ln -sf /path/to/new_file path/to/symlink
+
+## tail
+
+Displays the last part of the file
+
+### Useful flags
+
+1. `-f`: Keep reading the last few lines of the file until a \<C-c\> is pressed
+
+Follow the changes in a log file
+
+    tail -f logfile
+
+## sed
+
+Edit text in a scriptable manner (similar to `:s` in vim)
+
+Pipe from a command and edit the output
+
+    command | sed 's/apple/mango/g'
+
+## xargs
+
+Execute a command with piped arguments coming from another command, a file, etc.
+The input is treated as a single block of text and split into separate pieces on spaces, tabs, newlines and end-of-file.
+
+ Run a command using the input data as arguments
+
+    arguments_source | xargs comman
