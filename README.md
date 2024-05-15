@@ -251,3 +251,19 @@ The input is treated as a single block of text and split into separate pieces on
  Run a command using the input data as arguments
 
     arguments_source | xargs comman
+
+## awk
+
+Print the fifth column (a.k.a. field) in a space-separated file:
+
+    awk '{print $5}' path/to/file
+
+Print with comparison
+
+    awk '$2 >= 300 {print $1}' data.txt
+
+## cut
+
+ Print a field range of each line with a specific delimiter:
+
+    command | cut -d "," -f 1
