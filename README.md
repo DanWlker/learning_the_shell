@@ -60,12 +60,25 @@ Pipe ls to grep/ripgrep to find specific file
 
 ## find
 
+### Useful flags
+
+1. `-iname`: Insensitive name
+2. `-name`: Case sensitive
+
 Pipe find to grep/ripgrep to filter not include or include, you can chain them apparently
 
     find . -iname pubspec.yaml | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
     find . -iname pubspec.yaml | grep -v 'Dart-Code' | grep -v 'packages'| grep -v '/flutter'
     fd 'pubspec.yaml' | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
 
+## fd
+
+### Useful flags
+
+1. `-e`: Find files with a specific extension
+2. `-s`: Case sensitive
+3. `-u`: include ignored and hidden files in the search, alias for --hidden and --no-ignore
+4. `-t {type}`: Specify the type of thing to look for, file, directory etc.
 
 ## sed (gnu sed, not  the one in mac)
 
@@ -75,22 +88,21 @@ Edit text in a scriptable manner (similar to `:s` in vim)
 
 1. `-i`: Does the replacement for the file in place
 
-
 Pipe from a command and edit the output
 
     command | sed 's/apple/mango/g'
 
 Replace and write to file, don't use `>`, it will result in blank file
-    
+
     sed -i 's/apple/mango/g' pubspec.yaml
 
 ## mv
 
 ### Useful flags
 
-1. `-f`: Do not prompt for confirmation before overwriting 
-1. `-i` : ask for confirmation before overwriting
-2. `-n` : prevents existing file from being overwritten
+1. `-f`: Do not prompt for confirmation before overwriting
+2. `-i` : ask for confirmation before overwriting
+3. `-n` : prevents existing file from being overwritten
 
 Move multiple files at once
 
