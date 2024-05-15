@@ -14,13 +14,31 @@ Redirecting stream to, only applies to stdout
 
 Appends rather than write to file when compared to single variants above
 
+## grep
+
+### Useful flags
+
+1. `-i`: Case insensitive
+2. `-v`: Returns the reverse of what you searching (what didn't match)
+
+Grep from one file only
+
+    grep searchString fileName.txt
+
+## ripgrep
+
+### Useful flags
+
+1. `-s`: Case sensitive
+2. `-v`: Returns the reverse of what you searching (what didn't match)
+
 ## fzf
 
 ### Useful flags
 
 1. `--query \'celeste.zip`
-2. `--query "'celeste.zip | 'celeste-osx"` : query with or `|`
-3. `-preview 'cat {}'`
+2. `--query "'celeste.zip | 'celeste-osx"`: query with or `|`
+3. `--preview 'cat {}'`
 
 ### Command related specific syntax
 
@@ -40,45 +58,39 @@ Pipe ls to grep/ripgrep to find specific file
     ls -l | rg "Desktop"
     eza -l | rg "Desktop"
 
-## find/fd
+## find
 
-Pipe find/fd to grep/ripgrep to filter not include or include, you can chain them apparently
+Pipe find to grep/ripgrep to filter not include or include, you can chain them apparently
 
     find . -iname pubspec.yaml | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
     find . -iname pubspec.yaml | grep -v 'Dart-Code' | grep -v 'packages'| grep -v '/flutter'
     fd 'pubspec.yaml' | rg -v 'Dart-Code' | rg -v 'packages'| rg -v '/flutter'
 
-## tr
+
+## sed (gnu sed, not  the one in mac)
+
+Edit text in a scriptable manner (similar to `:s` in vim)
 
 ### Useful flags
 
-1. `-d "stuff"` : delete "stuff"
-2. `-cd "stuff"` : delete everything except stuff
-3. `-s " "` : truncate repeating " " to single
+1. `-i`: Does the replacement for the file in place
 
-### Command related specific syntax
 
-1. [:lower:] : lower case
-2. [:upper:] : upper case
-3. [:space:]
-4. [:digit:]
+Pipe from a command and edit the output
 
-Replace stuff in file, some extra options:
+    command | sed 's/apple/mango/g'
 
-    cat README.md | tr "[:lower:]" "[:upper:]"
-    tr "[:lower:]" "[:upper:]" <README.md
-
-Pipe stuff from and into new file
-
-    tr "[:lower:]" "[:upper:]" <README.md >newStuff.txt
+Replace and write to file, don't use `>`, it will result in blank file
+    
+    sed -i 's/apple/mango/g' pubspec.yaml
 
 ## mv
 
-### Useful Flags
+### Useful flags
 
-1. `-b` : take a backup of an existing file that will be ovewritten
-2. `-i` : ask for confirmation before overwriting
-3. `-n` : prevents existing file from being overwritten
+1. `-f`: Do not prompt for confirmation before overwriting 
+1. `-i` : ask for confirmation before overwriting
+2. `-n` : prevents existing file from being overwritten
 
 Move multiple files at once
 
@@ -86,11 +98,10 @@ Move multiple files at once
 
 ## cp
 
-### Useful Flags
+### Useful flags
 
-1. `-b` : take a backup of an existing file that will be ovewritten
-2. `-i` : ask for confirmation before overwriting
-3. `-r` : use this if want copy directory
+1. `-i` : ask for confirmation before overwriting
+2. `-R` : use this if want copy directory
 
 Copy multiple files at once
 
@@ -98,7 +109,7 @@ Copy multiple files at once
 
 ## unzip
 
-### Useful Flags
+### Useful flags
 
 1. `-d destination_folder` : unzip to particular folder
 2. `-l path/to/archive.zip` : list without unzip
@@ -186,13 +197,39 @@ Follow the changes in a log file
 
     tail -f logfile
 
-## sed
+## jq
 
-Edit text in a scriptable manner (similar to `:s` in vim)
+Get json from clipboard and display it with colors
 
-Pipe from a command and edit the output
+    pbpaste | jq
 
-    command | sed 's/apple/mango/g'
+Get specific field from json, use `[n]` to get the nth element if its a list, leave it empty `[]` to get the whole list
+
+    cat filename.json | jq '.field.field[2]'
+
+## yq
+
+### Useful flags
+
+1. `-Poy`: Convert json to yaml
+
+Read from a file
+
+    cat pubspec.yaml | yq
+    yq eval pubspec.yaml
+
+Get yaml from clipboard
+
+    pbpaste | yq
+
+Get specific field name from yaml
+
+    cat pubspec.yaml | yq '.dependencies.libgit2dart'
+
+Convert json to yaml
+
+    pbpaste | yq -Poy
+    yq -Poy thing.json
 
 ## xargs
 
