@@ -40,7 +40,7 @@ Grep from one file only
 2. `--query "'celeste.zip | 'celeste-osx"`: query with or `|`
 3. `--preview 'cat {}'`
 
-### Command related specific syntax
+### Command specific syntax
 
 1. 'celeste.zip: `'` searches exact match
 2. 'celeste.zip | 'celeste-osx : or is `|`
@@ -211,13 +211,43 @@ Follow the changes in a log file
 
 ## jq
 
+[Read this for guide](https://www.baeldung.com/linux/jq-command-json)
+
+### Useful flags
+
+1. `-c`: Compact output
+
+### Command specific syntax
+
+1. `.var`, `.` `.field.innerfield`
+2. `keys`: get the keys instead of the values
+3. `length`: get the length of a json array
+4. `|`
+5. `has("keyName")`
+6. `map(.field)`: always ouputs an arrya, can be combined with has inside the ()
+7. `min`, `max`
+8. `select()`: selects the objects that fullfill the condition
+9. `del()`: similar to select but deletes the keys from the json
+
 Get json from clipboard and display it with colors
 
     pbpaste | jq
 
+Get json from clipboard, minifiy it `-c`, and copy it back to clipboard
+
+    pbpaste | jq -c | pbcopy
+
 Get specific field from json, use `[n]` to get the nth element if its a list, leave it empty `[]` to get the whole list
 
     cat filename.json | jq '.field.field[2]'
+
+Create an array from the items and pipe to min
+
+    jq '[.[].price] | min' < temp.json
+
+Select items based on condition
+
+    jq '.[] | select(.color=="yellow" and .price>=0.5)' fruits.json
 
 ## yq
 
