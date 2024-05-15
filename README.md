@@ -216,6 +216,7 @@ Follow the changes in a log file
 ### Useful flags
 
 1. `-c`: Compact output
+2. `-r`: Raw output, useful to pipe to other stuff
 
 ### Command specific syntax
 
