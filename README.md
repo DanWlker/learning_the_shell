@@ -50,6 +50,12 @@ Piping output from fzf to cat/bat
     cat $(fzf)
     bat $(fzf)
 
+## cd/zoxide
+
+Return to last location
+
+    cd -
+
 ## ls/eza
 
 Pipe ls to grep/ripgrep to find specific file
