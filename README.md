@@ -130,6 +130,29 @@ Copy multiple files at once
 
     cp file1 file2 file3 /path/to/destination
 
+## rsync
+
+### Useful flags
+
+1. `-P`: Check progress for individual files
+1. `--info=progress2 --info=name0`: Check progress as a whole
+1. `-a`: Archive mode, use this if you are making backups
+1. `-z`: Whether to compress when sending
+1. `--delete`: Delete at destination if origin does not exist (usually for backups)
+1. `--remove-source-files`: Remove source files after deletion
+1. `-r`: Copy dir recursively
+1. `--dry-run`: Test run before actually copying
+1. `-v`: Verbose, use it with dry run to check if dry run works 
+
+### Useful tutorials
+
+1. [How to Use the rsync Command to Transfer Files (Linux Crash Course Series)](https://www.youtube.com/watch?v=KG78O53u8rY)
+1. [Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely](https://www.youtube.com/watch?v=qE77MbDnljA)
+
+Rsync to a folder in a remote server
+
+    rsync -rv --dry-run origin/ username@ip.address.1.128:/dest/dest_folder
+
 ## unzip
 
 ### Useful flags
