@@ -103,7 +103,7 @@ Pipe from a command and edit the output
 
     command | sed 's/apple/mango/g'
 
-Replace and write to file, don't use `>`, it will result in blank file
+Replace and write to file, don't use `>`, it will result in blank file (only applies if you are reading and writing to the same file, you can use `>` and `<` for different files)
 
     sed -i 's/apple/mango/g' pubspec.yaml
 
@@ -313,6 +313,10 @@ Convert json to yaml
 Execute a command with piped arguments coming from another command, a file, etc.
 The input is treated as a single block of text and split into separate pieces on spaces, tabs, newlines and end-of-file.
 
+### Useful tutorials
+
+1. [Xargs Should Be In Your Command Line Toolbag](https://www.youtube.com/watch?v=rp7jLi_kgPg)
+
  Run a command using the input data as arguments
 
     arguments_source | xargs comman
@@ -327,8 +331,34 @@ Print with comparison
 
     awk '$2 >= 300 {print $1}' data.txt
 
-## cut
+## cut (Use Awk if possible)
+
+### Useful tutorials
+
+[Two Powerful Command Line Utilities 'cut' And 'tr'](https://www.youtube.com/watch?v=_0IFtMFYroU)
 
  Print a field range of each line with a specific delimiter:
 
     command | cut -d "," -f 1
+
+## tr
+
+### Useful flags
+
+1. `-s`: Squeeze repeating characters
+1. `-d`: Delete
+1. `-c`: Complement (usually with `-d`, delete everytheng except)
+
+### Command specific syntax
+
+1. `[:lower:]` 
+1. `[:upper:]`
+1. `[:digit:]`
+
+Squeeze repeating characters
+
+    echo "abc   def" | tr -s ' ' ':'
+
+Change lower to uppercase
+
+    echo "abc   def" | tr -s '[:lower:]' '[:upper:]'
