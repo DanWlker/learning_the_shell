@@ -149,7 +149,7 @@ Copy multiple files at once
 1. [How to Use the rsync Command to Transfer Files (Linux Crash Course Series)](https://www.youtube.com/watch?v=KG78O53u8rY)
 1. [Linux/Mac Terminal Tutorial: How To Use The rsync Command - Sync Files Locally and Remotely](https://www.youtube.com/watch?v=qE77MbDnljA)
 
-Rsync to a folder in a remote server
+Rsync to a folder in a remote server (can be sync from server to local as well by reversing the `username@ip...` with `origin/`)
 
     rsync -rv --dry-run origin/ username@ip.address.1.128:/dest/dest_folder
 
