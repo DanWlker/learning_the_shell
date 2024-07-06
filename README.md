@@ -14,6 +14,14 @@ Redirecting stream to, only applies to stdout
 
 Appends rather than write to file when compared to single variants above
 
+### --
+
+To signify the end of command options, after which only positional ("non-option") arguments are accepted.[1](https://stackoverflow.com/a/2427987) [2](https://unix.stackexchange.com/questions/11376/what-does-double-dash-double-hyphen-mean/11382#11382)
+
+Ex.
+
+    grep -- -t
+
 ## grep
 
 ### Useful flags
@@ -310,6 +318,12 @@ Convert json to yaml
 
 ## xargs
 
+### Useful flags
+
+1. `-I`: Specifies a placeholder
+1. `-n`: Number of args for the program input
+1. `-P`: Number of processes per time
+
 Execute a command with piped arguments coming from another command, a file, etc.
 The input is treated as a single block of text and split into separate pieces on spaces, tabs, newlines and end-of-file.
 
@@ -317,9 +331,24 @@ The input is treated as a single block of text and split into separate pieces on
 
 1. [Xargs Should Be In Your Command Line Toolbag](https://www.youtube.com/watch?v=rp7jLi_kgPg)
 
- Run a command using the input data as arguments
+Run a command using the input data as arguments
 
-    arguments_source | xargs comman
+    arguments_source | xargs command
+
+How to use `-I`
+
+    ls | xargs -I {} echo "/home/{}"
+    ls | cut -d '.' -f1 | xargs -I {} mv {}.txt {}.text
+
+How to use `-n`
+
+    seq 5 | xargs -n 1 -P 1 bash -c 'echo $0; sleep 1'
+    seq 5 | xargs -n 2 -P 2
+
+How to use `-P`
+
+    seq 5 | xargs -n 1 -P 2 bash -c 'echo $0; sleep 1'
+
 
 ## awk
 
