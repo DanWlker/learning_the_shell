@@ -50,6 +50,11 @@ Piping output from fzf to cat/bat
     cat $(fzf)
     bat $(fzf)
 
+`**` to fuzzy find from current location 
+
+    cd ~/Documents/**
+    kill -9 **
+
 ## cd/zoxide
 
 Return to last location
