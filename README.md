@@ -22,6 +22,12 @@ Ex.
 
     grep -- -t
 
+### IO Redirection
+
+[Advanced IO Redirection](https://www.instagram.com/reel/C9Fht23vTPi/)
+
+[How pipes work](https://stackoverflow.com/questions/9834086/what-is-a-simple-explanation-for-how-pipes-work-in-bash)
+
 ## grep
 
 ### Useful flags
