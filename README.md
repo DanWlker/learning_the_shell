@@ -18,6 +18,10 @@ Appends rather than write to file when compared to single variants above
 
 To signify the end of command options, after which only positional ("non-option") arguments are accepted.[1](https://stackoverflow.com/a/2427987) [2](https://unix.stackexchange.com/questions/11376/what-does-double-dash-double-hyphen-mean/11382#11382)
 
+### $VISUAL or $EDITOR
+
+(README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps)[https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
+
 Ex.
 
     grep -- -t
