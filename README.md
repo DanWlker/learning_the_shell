@@ -22,6 +22,16 @@ Ex.
 
     grep -- -t
 
+### \ 
+
+1. Before command ex. `\mv`
+    - [To avoid shell aliases](https://www.linuxquestions.org/questions/linux-newbie-8/use-of-%5C-backslash-in-commands-4175427927/)
+
+1. Escape charecter ex. `mv file\ name.txt`
+    - To escape spaces
+
+3. New line when at end of the command
+
 ### $VISUAL or $EDITOR
 
 (README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps)[https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
