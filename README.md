@@ -34,7 +34,7 @@ Ex.
 
 ### $VISUAL or $EDITOR
 
-(README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps)[https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
+[README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps](https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
 
 ### IO Redirection
 
@@ -287,7 +287,7 @@ Follow the changes in a log file
 3. `length`: get the length of a json array
 4. `|`
 5. `has("keyName")`
-6. `map(.field)`: always ouputs an arrya, can be combined with has inside the ()
+6. `map(.field)`: always ouputs an array, can be combined with has inside the ()
 7. `min`, `max`
 8. `select()`: selects the objects that fullfill the condition
 9. `del()`: similar to select but deletes the keys from the json
@@ -351,6 +351,8 @@ The input is treated as a single block of text and split into separate pieces on
 
 1. [Xargs Should Be In Your Command Line Toolbag](https://www.youtube.com/watch?v=rp7jLi_kgPg)
 
+1. [Xargs Explained](https://www.youtube.com/watch?v=HK1wAV9x4-A)
+
 Run a command using the input data as arguments
 
     arguments_source | xargs command
@@ -369,6 +371,9 @@ How to use `-P`
 
     seq 5 | xargs -n 1 -P 2 bash -c 'echo $0; sleep 1'
 
+Launch new shell to run commands
+
+    cat hostnames | xargs -I{} P4 sh -c "host -t A {} 8.8.8.8 | tail -n1"
 
 ## awk
 
