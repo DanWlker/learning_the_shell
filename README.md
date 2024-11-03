@@ -470,6 +470,10 @@ To find current mac ip address
 
     ifconfig -l | xargs -n1 ipconfig getifaddr
 
+To find ipv4 / inet addresses
+
+    ifconfig | grep inet
+
 ## ipconfig
 
 Show the IP address of an interface:
