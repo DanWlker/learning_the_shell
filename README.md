@@ -417,13 +417,66 @@ Change lower to uppercase
 
     echo "abc   def" | tr -s '[:lower:]' '[:upper:]'
 
-## ps
+## ps (weird abit on macos)
 
-## netstat
+### Useful flags
+
+1. `-H`: This is not working on macos, use `pstree`
+1. `-j`: Print information associated with the following keywords: user, pid, ppid, pgid, sess, jobc, state, tt, time, and command.
+1. `aujx`: This variation can basically everything
+
+### Output info
+
+1. TTY (terminal)
+    - `?`: started by system
+
+1. STAT
+    - `s`: root process / process leader, has child
+    - `S`: waiting for user input, can't be disturbed
+    - `R`: actively running
+    - `T`: process is stopped (like <C-Z> moving process to background)
+
+1. START : check start time of process
+
+Show processes particular to this terminal session
+
+    ps
+
+Show all processes
+
+    ps x
+
+## netstat (weird abit on macos)
+
+### Useful flags
+
+1. `-b`: show which process started the connection
+1. `-a`: show the state of all sockets (current connenctions and which tcp and udp ports are listening)
+1. `-n`: shows only numbers and not names
+1. `-p`: shows pid
+
+## lsof (macos netstat is abit different, so use this to see ports)
+
+1. `-i`: this can be used with or without a `:port`, if no port then it shows all
+
+## ifconfig
+
+### Useful flags
+
+1. `-a`: shows you the list of interfaces along with their IP and MAC addresses (the latter one only if applicable)
+1. `-l`: list all available interfaces on the system, with no other additional informatio
+
+To find current mac ip address
+
+    ifconfig -l | xargs -n1 ipconfig getifaddr
+
+## ipconfig
+
+Show the IP address of an interface:
+
+      ipconfig getifaddr interface_name
 
 ## traceroute?
-
-## check which port is taken?
 
 ## dns?
 
