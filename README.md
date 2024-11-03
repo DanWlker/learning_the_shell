@@ -416,3 +416,15 @@ Squeeze repeating characters
 Change lower to uppercase
 
     echo "abc   def" | tr -s '[:lower:]' '[:upper:]'
+
+## ps
+
+## netstat
+
+## traceroute?
+
+## check which port is taken?
+
+## dns?
+
+## easiest firewall?
