@@ -57,6 +57,10 @@ Ex.
 
 3. New line when at end of the command
 
+### $?
+
+This will give you the last exit code
+
 ### $VISUAL or $EDITOR
 
 [README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps](https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
