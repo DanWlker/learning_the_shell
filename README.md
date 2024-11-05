@@ -31,11 +31,15 @@ drwx------: A directory where only the owner can read, write and execute
 
 Subshell, not actually a command but more of syntax, allows you to run commands then inject the output of the command into another thing (Refer examples below)
 
-### > or <
+### >
 
-Redirecting stream to, only applies to stdout
+Redirect stream to, redirects stdout
 
-### >> or <<
+### 2>
+
+Redirect stream to, redirects stderr
+
+### >>
 
 Appends rather than write to file when compared to single variants above
 
@@ -70,6 +74,35 @@ This will give you the last exit code
 [Advanced IO Redirection](https://www.instagram.com/reel/C9Fht23vTPi/)
 
 [How pipes work](https://stackoverflow.com/questions/9834086/what-is-a-simple-explanation-for-how-pipes-work-in-bash)
+
+## kill
+
+### Useful flags (refer explanations below)
+
+1. `-9`
+2. `-2`
+3. `-17`
+4. `-1`
+
+Terminate a program
+
+    kill PID
+
+Terminate a program using the SIGHUP (hang up) signal. Many daemons will reload instead of terminating:
+
+    kill -1|HUP process_id
+
+Terminate a program using the SIGINT (interrupt) signal. This is typically initiated by the user pressing `Ctrl + C`:
+
+    kill -2|INT process_id
+
+Signal the operating system to immediately terminate a program (which gets no chance to capture the signal):
+
+    kill -9|KILL process_id
+
+Signal the operating system to pause a program until a SIGCONT ("continue") signal is received:
+
+    kill -17|STOP process_id
 
 ## chmod
 
@@ -540,6 +573,37 @@ To find ipv4 / inet addresses
 Show the IP address of an interface:
 
       ipconfig getifaddr interface_name
+
+## ab
+
+### Useful flags
+
+1. `-n`: number of requests
+1. `-c`: number of concurrent requests to make at a time
+1. `-t`: time limit
+1. `-p`: File containing data to POST. Remember also to set -T
+1. `-u`: File containing data to PUT. Remember also to set -T
+1. `-T`: Content-type header to use for POST/PUT data, eg. 'application/x-www-form-urlencoded' Default is 'text/plain'
+1. `-e`: Output CSV file with percentages served
+
+Execute 100 HTTP GET requests to a given URL:
+
+      ab -n 100 url
+
+Execute 100 HTTP GET requests, in concurrent batches of 10, to a URL:
+
+      ab -n 100 -c 10 url
+
+Execute 100 HTTP POST requests to a URL, using a JSON payload from a file:
+
+      ab -n 100 -T application/json -p path/to/file.json url
+ Set the maximum number of seconds ([t]imeout) to spend for benchmarking (30 by default):
+
+      ab -t 60 url
+
+Write the results to a CSV file:
+
+      ab -e path/to/file.csv
 
 ## traceroute?
 
