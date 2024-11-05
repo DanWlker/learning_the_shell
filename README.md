@@ -61,6 +61,22 @@ Ex.
 
 [How pipes work](https://stackoverflow.com/questions/9834086/what-is-a-simple-explanation-for-how-pipes-work-in-bash)
 
+## chmod
+
+### Useful flags
+
+1. `-R`: recursive, do this to all the contents of the directory as well
+
+### Command specific syntax
+
+1. `u=`: user
+1. `g=`: group
+1. `o=`: others
+
+Changing permissions of directory
+
+    chmod -R u=rwx,g=,o= DIRECTORY
+
 ## grep
 
 ### Useful flags
