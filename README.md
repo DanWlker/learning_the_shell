@@ -10,13 +10,19 @@
 `r`, `w`, `x` can be present or `-` (which means permission is not granted)
 
 2, 3, 4 applies to the owner (user that created the directory)
+
 5, 6, 7 applies to group
+
 8, 9, 10 applies to everyone else
 
 Ex.
+
 -rwxrwxrwx: A file where everyone can do everything
+
 -rwxr-xr-x: A file where everyone can read and execute, but only the owner can write
+
 drwxr-xr-x: A directory where everyone can read (ls the contents) and execute (cd into it), but only the owner can write (modify the contents)
+
 drwx------: A directory where only the owner can read, write and execute
 
 ## Operators
