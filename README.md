@@ -63,9 +63,13 @@ Ex.
 
 ## chmod
 
+change the permissions of any file or directory that you own
+
 ### Useful flags
 
 1. `-R`: recursive, do this to all the contents of the directory as well
+1. `-x`: removes the executable permission from file
+1. `+x`: adds the executable permission to file
 
 ### Command specific syntax
 
@@ -73,9 +77,21 @@ Ex.
 1. `g=`: group
 1. `o=`: others
 
-Changing permissions of directory
+Changing permissions recursively in a directory
 
     chmod -R u=rwx,g=,o= DIRECTORY
+
+Remove executable permission
+
+    chmod -x file.sh
+
+## chown
+
+1. `-R`: recursive, do this to all the contents of the directory as well
+
+Change owner of entire directory recursively to root
+
+    sudo chown -R root DIRECTORY
 
 ## grep
 
