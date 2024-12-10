@@ -75,6 +75,28 @@ This will give you the last exit code
 
 [How pipes work](https://stackoverflow.com/questions/9834086/what-is-a-simple-explanation-for-how-pipes-work-in-bash)
 
+## sudo
+
+Rerun the previous command with sudo
+
+    sudo !!
+
+## mkdir
+
+### Useful flags
+
+1. `-p`: Create intermediate directories as required
+
+Make multiple directories and subdirectories at once
+
+    mkdir -p ./home/{folder_a, folder_b}/{folder_x, folder_y, folder_z}
+
+## touch
+
+Make multiple files with similar names at once
+
+    touch file{1..10}.txt
+
 ## kill
 
 ### Useful flags (refer explanations below)
