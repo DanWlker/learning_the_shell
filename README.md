@@ -27,6 +27,8 @@ drwx------: A directory where only the owner can read, write and execute
 
 ## Operators
 
+[IO Redirection Explained](https://www.youtube.com/watch?v=7VaO2dxs_kg)
+
 ### $()
 
 Subshell, not actually a command but more of syntax, allows you to run commands then inject the output of the command into another thing (Refer examples below)
