@@ -27,8 +27,6 @@ drwx------: A directory where only the owner can read, write and execute
 
 ## Operators
 
-[IO Redirection Explained](https://www.youtube.com/watch?v=7VaO2dxs_kg)
-
 ### $()
 
 Subshell, not actually a command but more of syntax, allows you to run commands then inject the output of the command into another thing (Refer examples below)
@@ -72,6 +70,8 @@ This will give you the last exit code
 [README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps](https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
 
 ### IO Redirection
+
+[IO Redirection Explained](https://www.youtube.com/watch?v=7VaO2dxs_kg)
 
 [Advanced IO Redirection](https://www.instagram.com/reel/C9Fht23vTPi/)
 
