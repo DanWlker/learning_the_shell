@@ -666,6 +666,10 @@ Opens nc, and you can type so that it writes what you type to the network stream
 
     nc localhost port
 
+Listen for incoming connection to udp
+
+    nc -u -l port
+
 
 ## traceroute?
 
