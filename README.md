@@ -645,6 +645,23 @@ Append to the given files, do not overwrite:
 
       echo "example" | tee -a path/to/file
 
+## nc
+
+Redirect I/O into network stream
+
+Start a listener on the specified TCP port and send a file into it:
+
+      nc -l -p port < filename
+
+Connect to a target listener on the specified port and receive a file from it:
+
+      nc host port > received_filename
+
+Redirect stdout to host and port with timeout (timeout is `-w`)
+
+    echo "HELLO WORLD" | nc -w 1 host port
+
+
 
 ## traceroute?
 
