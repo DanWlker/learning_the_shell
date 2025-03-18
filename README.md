@@ -602,7 +602,7 @@ To find ipv4 / inet addresses
 
 Show the IP address of an interface:
 
-      ipconfig getifaddr interface_name
+    ipconfig getifaddr interface_name
 
 ## ab
 
@@ -618,32 +618,33 @@ Show the IP address of an interface:
 
 Execute 100 HTTP GET requests to a given URL:
 
-      ab -n 100 url
+    ab -n 100 url
 
 Execute 100 HTTP GET requests, in concurrent batches of 10, to a URL:
 
-      ab -n 100 -c 10 url
+    ab -n 100 -c 10 url
 
 Execute 100 HTTP POST requests to a URL, using a JSON payload from a file:
 
-      ab -n 100 -T application/json -p path/to/file.json url
- Set the maximum number of seconds ([t]imeout) to spend for benchmarking (30 by default):
+    ab -n 100 -T application/json -p path/to/file.json url
+    
+Set the maximum number of seconds ([t]imeout) to spend for benchmarking (30 by default):
 
-      ab -t 60 url
+    ab -t 60 url
 
 Write the results to a CSV file:
 
-      ab -e path/to/file.csv
+    ab -e path/to/file.csv
 
 ## tee
 
 Copy `stdin` to each file, and also to `stdout`:
 
-      echo "example" | tee path/to/file
+    echo "example" | tee path/to/file
 
 Append to the given files, do not overwrite:
 
-      echo "example" | tee -a path/to/file
+    echo "example" | tee -a path/to/file
 
 ## nc
 
@@ -651,11 +652,11 @@ Redirect I/O into network stream
 
 Start a listener on the specified TCP port and send a file into it:
 
-      nc -l -p port < filename
+    nc -l -p port < filename
 
 Connect to a target listener on the specified port and receive a file from it:
 
-      nc host port > received_filename
+    nc host port > received_filename
 
 Redirect stdout to host and port with timeout (timeout is `-w`)
 
