@@ -661,6 +661,9 @@ Redirect stdout to host and port with timeout (timeout is `-w`)
 
     echo "HELLO WORLD" | nc -w 1 host port
 
+Opens nc, and you can type so that it writes what you type to the network stream
+
+    nc localhost port
 
 
 ## traceroute?
