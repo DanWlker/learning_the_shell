@@ -69,6 +69,12 @@ This will give you the last exit code
 
 [README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps](https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
 
+[To set vscode as your $EDITOR, set it as `code -w`](https://github.com/ryanb/dotfiles/blob/master/zshrc)
+
+```
+export EDITOR="code -w"
+```
+
 ### IO Redirection
 
 [IO Redirection Explained](https://www.youtube.com/watch?v=7VaO2dxs_kg)
