@@ -635,6 +635,17 @@ Write the results to a CSV file:
 
       ab -e path/to/file.csv
 
+## tee
+
+Copy `stdin` to each file, and also to `stdout`:
+
+      echo "example" | tee path/to/file
+
+Append to the given files, do not overwrite:
+
+      echo "example" | tee -a path/to/file
+
+
 ## traceroute?
 
 ## dns?
