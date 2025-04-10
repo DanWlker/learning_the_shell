@@ -111,6 +111,12 @@ export EDITOR="code -w"
 
 TLDR; () and {;}, () executes commands in subshell, {} is in current shell and semicolon is required
 
+To run multiple commands in parallel and kill them together [1](https://unix.stackexchange.com/a/430215)
+
+```
+(command1 & command2)
+```
+
 ## sudo
 
 Rerun the previous command with sudo
