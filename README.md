@@ -65,6 +65,28 @@ Ex.
 
 This will give you the last exit code
 
+### ! operator stuff
+
+Previous command !!, you can use - to specify current command minus number !-2, or just directly the command line number !2
+
+```
+sudo !!
+```
+
+Get the previous arguments for the last command
+
+```
+mkdir thing
+cd !$
+```
+
+Get the command that starts with !{string}
+
+```
+echo !mkdir
+```
+
+
 ### $VISUAL or $EDITOR
 
 [README, in short, check for $VISUAL first, then check for $EDITOR, this applies more if you're writing cli apps](https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference)
@@ -82,6 +104,12 @@ export EDITOR="code -w"
 [Advanced IO Redirection](https://www.instagram.com/reel/C9Fht23vTPi/)
 
 [How pipes work](https://stackoverflow.com/questions/9834086/what-is-a-simple-explanation-for-how-pipes-work-in-bash)
+
+### Grouping Commands
+
+[From The Bash Manual](https://www.gnu.org/software/bash/manual/html_node/Command-Grouping.html)
+
+TLDR; () and {;}, () executes commands in subshell, {} is in current shell and semicolon is required
 
 ## sudo
 
