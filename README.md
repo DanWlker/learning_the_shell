@@ -622,6 +622,13 @@ Show all processes
 ## lsof (macos netstat is abit different, so use this to see ports)
 
 1. `-i`: this can be used with or without a `:port`, if no port then it shows all
+2. `-t`: specifies that lsof should produce terse output with no header, so the output may be piped to stuff like kill
+
+Kill process occupying port 8080
+
+```
+kill -9 $(lsof -ti:8080)
+```
 
 ## ifconfig
 
