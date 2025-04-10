@@ -117,6 +117,12 @@ To run multiple commands in parallel and kill them together [1](https://unix.sta
 (command1 & command2)
 ```
 
+[This](https://stackoverflow.com/a/52033580) is a more robust version
+
+```
+(trap 'kill0' SIGINT; command1 & command2 & command3 & wait)
+```
+
 ## sudo
 
 Rerun the previous command with sudo
