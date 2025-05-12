@@ -717,6 +717,10 @@ Listen for incoming connection to udp
 
     nc -u -l port
 
+## sftp
+
+[How to use Sftp](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
+
 
 ## traceroute?
 
