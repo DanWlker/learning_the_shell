@@ -86,6 +86,15 @@ Ex.
 
 This will give you the last exit code
 
+### ^
+
+Rerun the previous command while replacing string
+
+```
+cd dotfiles
+^dotfiles^nvim
+```
+
 ### ! operator stuff
 
 Previous command !!, you can use - to specify current command minus number !-2, or just directly the command line number !2
