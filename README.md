@@ -1,5 +1,12 @@
 # Learning The Shell
 
+## zsh easter egg
+
+```
+autoload -Uz tetriscurses
+tetriscurses
+```
+
 ## Permission
 
 10 character string, ex drwxrwxrwx
