@@ -50,6 +50,20 @@ Redirect stream to, redirects stderr
 
 Appends rather than write to file when compared to single variants above
 
+### :>
+
+The :> command in a Unix-like shell (e.g., bash) is a shell redirection operator used to truncate or create a file, effectively making it empty. Here's a breakdown:
+
+    : is the null command (a built-in shell command that does nothing and always succeeds).
+
+    > is the redirection operator that sends output to a file.
+
+So, :> filename:
+
+    If filename does not exist, it creates an empty file.
+
+    If filename exists, it truncates (empties) the file content, but the file remains.
+
 ### --
 
 To signify the end of command options, after which only positional ("non-option") arguments are accepted.[1](https://stackoverflow.com/a/2427987) [2](https://unix.stackexchange.com/questions/11376/what-does-double-dash-double-hyphen-mean/11382#11382)
