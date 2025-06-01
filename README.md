@@ -107,6 +107,18 @@ Get the command that starts with !{string}
 echo !mkdir
 ```
 
+Get the first argument for the current line (then press tab to expand in zsh)
+
+```
+!#:1
+```
+
+Get the first argument for the last line
+
+```
+mkdir ./run/hello
+cp onefile !:1
+```
 
 ### $VISUAL or $EDITOR
 
