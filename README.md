@@ -64,6 +64,18 @@ So, :> filename:
 
     If filename exists, it truncates (empties) the file content, but the file remains.
 
+### <() or =()
+
+[What exactly is <() and =() in bash in zsh](https://superuser.com/questions/1059781/what-exactly-is-in-bash-and-in-zsh)
+
+> <(list) connects the output of list with a file in /dev/fd, if supported by the system, otherwise a named pipe (FIFO) is used (which also depends on support by the system; neither manual says what happens if both mechanisms are not supported, presumably it aborts with an error). The name of the file is then passed as argument on the command line.
+> 
+> zsh additionally supports =(list) as possible replacement for <(list). With =(list) a temporary file is used instead of file in /dev/fd or a FIFO. It can be used as a replacement for <(list) if the program needs to lseek in the output.
+> 
+> According to the ZSH manual there might also be other issues with how <(list) works:
+>
+>> The = form is useful as both the /dev/fd and the named pipe implementation of <(...) have drawbacks. In the former case, some programmes may automatically close the file descriptor in question before examining the file on the command line, particularly if this is necessary for security reasons such as when the programme is running setuid. In the second case, if the programme does not actually open the file, the subshell attempting to read from or write to the pipe will (in a typical implementation, different operating systems may have different behaviour) block for ever and have to be killed explicitly. In both cases, the shell actually supplies the information using a pipe, so that programmes that expect to lseek (see man page lseek(2)) on the file will not work.
+
 ### --
 
 To signify the end of command options, after which only positional ("non-option") arguments are accepted.[1](https://stackoverflow.com/a/2427987) [2](https://unix.stackexchange.com/questions/11376/what-does-double-dash-double-hyphen-mean/11382#11382)
@@ -171,6 +183,18 @@ Rerun the previous command with sudo
 
     sudo !!
 
+## type
+
+Display the type of command the shell will execute.
+
+### Useful flags
+
+1. `-a`: show all
+
+Show all the type for grep
+
+    type -a grep   
+
 ## mkdir
 
 ### Useful flags
@@ -254,6 +278,9 @@ Change owner of entire directory recursively to root
 
 1. `-i`: Case insensitive
 2. `-v`: Returns the reverse of what you searching (what didn't match)
+3. `-C`: Show Context around the matches (requires number)
+3. `-A`: Show Rows above the matches (requires number)
+3. `-B`: Show Rows above the matches (requires number)
 
 Grep from one file only
 
@@ -265,6 +292,9 @@ Grep from one file only
 
 1. `-s`: Case sensitive
 2. `-v`: Returns the reverse of what you searching (what didn't match)
+3. `-C`: Show Context around the matches (requires number)
+3. `-A`: Show Rows above the matches (requires number)
+3. `-B`: Show Rows above the matches (requires number)
 
 ## fzf
 
