@@ -195,6 +195,14 @@ Show all the type for grep
 
     type -a grep   
 
+## file
+
+Determine the file type
+
+Show the type of a file
+
+    file .zshrc
+
 ## mkdir
 
 ### Useful flags
