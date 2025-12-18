@@ -177,6 +177,26 @@ To run multiple commands in parallel and kill them together [1](https://unix.sta
 (trap 'kill0' SIGINT; command1 & command2 & command3 & wait)
 ```
 
+## cat
+
+[Useless use of cat](https://www.smallo.ruhr.de/award.html)
+
+> # wrong
+>
+> cat file | grep foo
+>
+> # right
+>
+> grep foo < file
+>
+> # also right
+>
+> grep foo file
+
+Prefer using a command line tools builtin method of reading a file instead of
+passing in stdin. This is where we make the inference that, if a program says
+it can read a file passed by name, it's probably more performant to do that.
+
 ## echo
 
 Prints given arguments followed by a newline character
