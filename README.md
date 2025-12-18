@@ -177,6 +177,14 @@ To run multiple commands in parallel and kill them together [1](https://unix.sta
 (trap 'kill0' SIGINT; command1 & command2 & command3 & wait)
 ```
 
+## echo
+
+Prints given arguments followed by a newline character
+
+### Useful flags
+
+1. `-n`: Do not print the trailing newline character
+
 ## sudo
 
 Rerun the previous command with sudo
