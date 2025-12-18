@@ -84,15 +84,15 @@ Ex.
 
     grep -- -t
 
-### \ 
+### \
 
 1. Before command ex. `\mv`
-    - [To avoid shell aliases](https://www.linuxquestions.org/questions/linux-newbie-8/use-of-%5C-backslash-in-commands-4175427927/)
+   - [To avoid shell aliases](https://www.linuxquestions.org/questions/linux-newbie-8/use-of-%5C-backslash-in-commands-4175427927/)
 
 1. Escape charecter ex. `mv file\ name.txt`
-    - To escape spaces
+   - To escape spaces
 
-3. New line when at end of the command
+1. New line when at end of the command
 
 ### $?
 
@@ -193,7 +193,7 @@ Display the type of command the shell will execute.
 
 Show all the type for grep
 
-    type -a grep   
+    type -a grep
 
 ## file
 
@@ -287,8 +287,8 @@ Change owner of entire directory recursively to root
 1. `-i`: Case insensitive
 2. `-v`: Returns the reverse of what you searching (what didn't match)
 3. `-C`: Show Context around the matches (requires number)
-3. `-A`: Show Rows above the matches (requires number)
-3. `-B`: Show Rows above the matches (requires number)
+4. `-A`: Show Rows above the matches (requires number)
+5. `-B`: Show Rows above the matches (requires number)
 
 Grep from one file only
 
@@ -301,8 +301,8 @@ Grep from one file only
 1. `-s`: Case sensitive
 2. `-v`: Returns the reverse of what you searching (what didn't match)
 3. `-C`: Show Context around the matches (requires number)
-3. `-A`: Show Rows above the matches (requires number)
-3. `-B`: Show Rows above the matches (requires number)
+4. `-A`: Show Rows above the matches (requires number)
+5. `-B`: Show Rows above the matches (requires number)
 
 ## fzf
 
@@ -322,7 +322,7 @@ Piping output from fzf to cat/bat
     cat $(fzf)
     bat $(fzf)
 
-`**` to fuzzy find from current location 
+`**` to fuzzy find from current location
 
     cd ~/Documents/**
     kill -9 **
@@ -363,7 +363,7 @@ Pipe find to grep/ripgrep to filter not include or include, you can chain them a
 3. `-u`: include ignored and hidden files in the search, alias for --hidden and --no-ignore
 4. `-t {type}`: Specify the type of thing to look for, file, directory etc.
 
-## sed (gnu sed, not  the one in mac)
+## sed (gnu sed, not the one in mac)
 
 Edit text in a scriptable manner (similar to `:s` in vim)
 
@@ -414,7 +414,7 @@ Copy multiple files at once
 1. `--remove-source-files`: Remove source files after deletion
 1. `-r`: Copy dir recursively
 1. `--dry-run`: Test run before actually copying
-1. `-v`: Verbose, use it with dry run to check if dry run works 
+1. `-v`: Verbose, use it with dry run to check if dry run works
 
 ### Useful tutorials
 
@@ -635,7 +635,7 @@ Print with comparison
 
 [Two Powerful Command Line Utilities 'cut' And 'tr'](https://www.youtube.com/watch?v=_0IFtMFYroU)
 
- Print a field range of each line with a specific delimiter:
+Print a field range of each line with a specific delimiter:
 
     command | cut -d "," -f 1
 
@@ -651,7 +651,7 @@ Translate
 
 ### Command specific syntax
 
-1. `[:lower:]` 
+1. `[:lower:]`
 1. `[:upper:]`
 1. `[:digit:]`
 
@@ -678,13 +678,13 @@ Change : to newline
 ### Output info
 
 1. TTY (terminal)
-    - `?`: started by system
+   - `?`: started by system
 
 1. STAT
-    - `s`: root process / process leader, has child
-    - `S`: waiting for user input, can't be disturbed
-    - `R`: actively running
-    - `T`: process is stopped (like <C-Z> moving process to background)
+   - `s`: root process / process leader, has child
+   - `S`: waiting for user input, can't be disturbed
+   - `R`: actively running
+   - `T`: process is stopped (like <C-Z> moving process to background)
 
 1. START : check start time of process
 
@@ -760,7 +760,7 @@ Execute 100 HTTP GET requests, in concurrent batches of 10, to a URL:
 Execute 100 HTTP POST requests to a URL, using a JSON payload from a file:
 
     ab -n 100 -T application/json -p path/to/file.json url
-    
+
 Set the maximum number of seconds ([t]imeout) to spend for benchmarking (30 by default):
 
     ab -t 60 url
@@ -806,7 +806,6 @@ Listen for incoming connection to udp
 ## sftp
 
 [How to use Sftp](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
-
 
 ## traceroute?
 
