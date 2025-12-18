@@ -641,6 +641,8 @@ Print with comparison
 
 ## tr
 
+Translate
+
 ### Useful flags
 
 1. `-s`: Squeeze repeating characters
@@ -660,6 +662,10 @@ Squeeze repeating characters
 Change lower to uppercase
 
     echo "abc   def" | tr -s '[:lower:]' '[:upper:]'
+
+Change : to newline
+
+    echo $PATH | tr : '\n'
 
 ## ps (weird abit on macos)
 
