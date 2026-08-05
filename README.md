@@ -466,6 +466,8 @@ Unzip to same folder as the zip name
 
 ## git
 
+[watch this](https://youtu.be/99v51wRl7zE?si=gVHDTvpY8L4XUUTZ)
+
 View diff for file
 
     git diff filename.txt
